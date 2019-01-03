@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.19.0"></a>
+# [0.19.0](https://github.com/stasson/vue-mdc-adapter/compare/v0.18.2...v0.19.0) (2019-01-03)
+
+
+### Features
+
+* **mdc-dialog:** Add raised props for accept and cancel dialog buttons ([5b929b5](https://github.com/stasson/vue-mdc-adapter/commit/5b929b5))
+
+
+
 <a name="0.18.2"></a>
 ## [0.18.2](https://github.com/stasson/vue-mdc-adapter/compare/v0.18.1...v0.18.2) (2018-08-18)
 
