@@ -1,14 +1,18 @@
 <template>
-  <custom-button 
-    :class="classes" 
-    :style="styles" 
+  <custom-button
+    :class="classes"
+    :style="styles"
     :href="href"
-    :link="link" 
-    class="mdc-fab" 
-    v-on="listeners" >
-    <span class="mdc-fab__icon">
+    :link="link"
+    class="mdc-fab"
+    v-on="listeners">
+    <span
+      :class="{'material-icons': icon}"
+      class="mdc-fab__icon"
+    >
       <slot>{{ icon }}</slot>
     </span>
+    <span class="mdc-fab__label">{{ label }}</span>
   </custom-button>
 </template>
 
@@ -23,7 +27,8 @@ export default {
     icon: String,
     mini: Boolean,
     absolute: Boolean,
-    fixed: Boolean
+    fixed: Boolean,
+    label: String
   },
   data() {
     return {
@@ -31,17 +36,21 @@ export default {
         'material-icons': this.icon,
         'mdc-fab--mini': this.mini,
         'mdc-fab--absolute': this.absolute,
-        'mdc-fab--fixed': this.fixed
+        'mdc-fab--fixed': this.fixed,
+        'mdc-fab--extended': this.label
       },
       styles: {}
     }
   },
   watch: {
-    icon() {
-      this.$set(this.classes, 'material-icons', this.icon)
-    },
+    // icon() {
+    //   this.$set(this.classes, 'material-icons', this.icon)
+    // },
     mini() {
       this.$set(this.classes, 'mdc-fab--mini', this.mini)
+    },
+    label() {
+      this.$set(this.classes, 'mdc-fab--extended', true)
     }
   }
 }

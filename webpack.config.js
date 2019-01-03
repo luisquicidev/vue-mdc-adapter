@@ -190,7 +190,8 @@ if (isDevelopment) {
     contentBase: path.resolve(__dirname, 'static'),
     disableHostCheck: true,
     hot: true,
-    quiet: true
+    quiet: true,
+    port: 5000
   }
 
   // cloud9 support
